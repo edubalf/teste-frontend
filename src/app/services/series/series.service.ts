@@ -1,8 +1,27 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { environment } from '../../../environments/environment'
+import "rxjs/RX";
 
 @Injectable()
 export class SeriesService {
 
-  constructor() { }
+  constructor(private http: Http) { }
 
+  getSeries(page: number, count: number) {
+    return this.http.get(environment.traktUrl + 'shows/popular?page=' + page + '&limit=' + count)
+      .map(res => res.json())
+      .catch(this.handleError)
+  }
+
+  getSerieDetail(slug: string) {
+    return this.http.get(environment.traktUrl + 'shows/' + slug + '?extended=full')
+      .map(res => res.json())
+      .catch(this.handleError)
+  }
+
+  private handleError(error: any) {
+    console.error(error);
+    return Promise.reject(error);
+  }
 }

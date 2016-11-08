@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  traktUrl: "https://api.trakt.tv/"
 };
