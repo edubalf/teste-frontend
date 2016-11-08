@@ -7,8 +7,7 @@ describe('App: TesteFrontend', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
-      ],
+        AppComponent],
     });
   });
 
