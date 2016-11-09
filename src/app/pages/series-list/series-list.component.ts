@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Serie } from './models/serie';
-import { SeriesService } from './services/series/series.service'
+import { Serie } from '../../models/serie';
+import { SeriesService } from '../../services/series/series.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-series-list',
+  templateUrl: './series-list.component.html',
+  styleUrls: ['./series-list.component.css'],
   providers: [
     SeriesService
   ]
 })
-export class AppComponent implements OnInit {
+
+export class SeriesListComponent implements OnInit {
 
   series: Serie[];
 
@@ -27,5 +28,4 @@ export class AppComponent implements OnInit {
       .subscribe(data => this.series = data, error => console.log(error));
   }
 
-  title = 'app works!';
 }

@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
-import { LayoutComponent } from './pages/layout/layout.component';
+import { LayoutComponent } from './pages/shared/layout/layout.component';
+import { SeriesListComponent } from './pages/series-list/series-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    SeriesListComponent
   ],
   imports: [
     BrowserModule,
