@@ -4,9 +4,10 @@ export class Serie {
     };
     title: string = '';
     thumb: string = 'http://lorempixel.com/200/300/';
-    description: string = '';
+    overview: string = '';
     image: string = '';
-
+    rating: number;
+    
     constructor(values: Object = {}) {
         Object.assign(this, values);
     }

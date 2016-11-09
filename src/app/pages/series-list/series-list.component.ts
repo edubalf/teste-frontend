@@ -27,5 +27,5 @@ export class SeriesListComponent implements OnInit {
     this.seriesService.getSeries(1, 20)
       .subscribe(data => this.series = data, error => console.log(error));
   }
-
+  
 }

@@ -6,11 +6,13 @@ import { routing } from './app.routing';
 
 import { LayoutComponent } from './pages/shared/layout/layout.component';
 import { SeriesListComponent } from './pages/series-list/series-list.component';
+import { SerieDetailComponent } from './pages/serie-detail/serie-detail.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    SeriesListComponent
+    SeriesListComponent,
+    SerieDetailComponent
   ],
   imports: [
     BrowserModule,
