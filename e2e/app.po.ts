@@ -5,7 +5,15 @@ export class TesteFrontendPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  headLogo = element(by.css('.brand-logo'));
+
+  serieCards = element.all(by.css('.col a[href]'));
+
+  loadMoreSeriesButton = element(by.css('.btn'));
+
+  detailContent = element(by.css('app-serie-detail-content'));
+
+  buttonLoadMoreSeriesClick() {
+    element(by.css('.btn')).click();
   }
 }
