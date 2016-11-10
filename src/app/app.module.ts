@@ -7,12 +7,16 @@ import { routing } from './app.routing';
 import { LayoutComponent } from './pages/shared/layout/layout.component';
 import { SeriesListComponent } from './pages/series-list/series-list.component';
 import { SerieDetailComponent } from './pages/serie-detail/serie-detail.component';
+import { HeadBarComponent } from './components/shared/head-bar/head-bar.component';
+import { RatingFormat } from './pages/serie-detail/serie-detail.pipe';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     SeriesListComponent,
-    SerieDetailComponent
+    SerieDetailComponent,
+    HeadBarComponent,
+    RatingFormat
   ],
   imports: [
     BrowserModule,

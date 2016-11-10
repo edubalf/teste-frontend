@@ -11,6 +11,7 @@ describe('Service: Series', () => {
   });
 
   it('Buscar series', inject([SeriesService], (service: SeriesService) => {
-    expect(service.getSeries(1,10)).toBeTruthy();
+    expect(service.getSeries(1, 10)).toBeTruthy();
   }));
 });
+

@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  traktUrl: "https://private-anon-b124a4d7fa-trakt.apiary-proxy.com/"
+  traktUrl: 'https://private-anon-b124a4d7fa-trakt.apiary-proxy.com/'
 };

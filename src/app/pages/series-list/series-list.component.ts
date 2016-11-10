@@ -13,10 +13,16 @@ import { SeriesService } from '../../services/series/series.service';
 
 export class SeriesListComponent implements OnInit {
 
-  series: Serie[];
+  series: Serie[] = [];
+
+  page: number = 1;
 
   constructor(private seriesService: SeriesService) {
 
+  }
+
+  loadMoreSeries(event) {
+    this.getSeries();
   }
 
   ngOnInit() {
@@ -24,8 +30,19 @@ export class SeriesListComponent implements OnInit {
   }
 
   getSeries() {
-    this.seriesService.getSeries(1, 20)
-      .subscribe(data => this.series = data, error => console.log(error));
+
+    this.seriesService.getSeries(this.page, 12)
+      .subscribe((data) => {
+
+        Array.from(data).forEach(function (serie: Serie) {
+          serie.thumb = 'http://lorempixel.com/200/300/';
+        });
+
+        this.series = this.series.concat(data);
+
+      }, error => console.log(error));
+
+    this.page++;
   }
-  
+
 }

@@ -3,11 +3,11 @@ export class Serie {
         slug: string
     };
     title: string = '';
-    thumb: string = 'http://lorempixel.com/200/300/';
+    thumb: string = '';
     overview: string = '';
     image: string = '';
-    rating: number;
-    
+    rating: number = 0;
+
     constructor(values: Object = {}) {
         Object.assign(this, values);
     }

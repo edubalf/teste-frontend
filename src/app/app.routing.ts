@@ -8,7 +8,7 @@ const appRoutes: Routes = [
     { path: '', component: SeriesListComponent },
     { path: 'serie', component: SeriesListComponent },
     { path: 'serie/:slug', component: SerieDetailComponent },
-]
+];
 
 export const appRoutingProviders: any[] = [
 
