@@ -6,8 +6,9 @@ import { SerieDetailComponent } from './pages/serie-detail/serie-detail.componen
 
 const appRoutes: Routes = [
     { path: '', component: SeriesListComponent },
-    { path: 'serie', component: SeriesListComponent },
-    { path: 'serie/:slug', component: SerieDetailComponent },
+    { path: 'recrutamento-front', component: SeriesListComponent },
+    { path: 'recrutamento-front/serie', component: SeriesListComponent },
+    { path: 'recrutamento-front/serie/:slug', component: SerieDetailComponent },
 ];
 
 export const appRoutingProviders: any[] = [
