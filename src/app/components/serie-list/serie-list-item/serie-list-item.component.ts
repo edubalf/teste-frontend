@@ -3,8 +3,7 @@ import { Serie } from '../../../models/serie';
 
 @Component({
   selector: '[app-serie-list-item]',
-  templateUrl: './serie-list-item.component.html',
-  styleUrls: ['./serie-list-item.component.css']
+  templateUrl: './serie-list-item.component.html'
 })
 export class SerieListItemComponent implements OnInit {
 
