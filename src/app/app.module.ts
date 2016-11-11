@@ -8,7 +8,7 @@ import { LayoutComponent } from './pages/shared/layout/layout.component';
 import { SeriesListComponent } from './pages/series-list/series-list.component';
 import { SerieDetailComponent } from './pages/serie-detail/serie-detail.component';
 import { HeadBarComponent } from './components/shared/head-bar/head-bar.component';
-import { RatingFormat } from './pages/serie-detail/serie-detail.pipe';
+import { RatingFormat } from './pipes/serie-detail/serie-detail.pipe';
 import { SerieListItemComponent } from './components/serie-list/serie-list-item/serie-list-item.component';
 import { SerieDetailContentComponent } from './components/serie-detail/serie-detail-content/serie-detail-content.component';
 

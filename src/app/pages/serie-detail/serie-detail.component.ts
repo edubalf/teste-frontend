@@ -6,7 +6,6 @@ import { Serie } from '../../models/serie';
 @Component({
   selector: 'app-serie-detail',
   templateUrl: './serie-detail.component.html',
-  styleUrls: ['./serie-detail.component.css'],
   providers: [
     SeriesService
   ]
@@ -28,6 +27,9 @@ export class SerieDetailComponent implements OnInit {
 
   getSerieDetail(slug: string) {
     this.seriesService.getSerieDetail(slug)
-      .subscribe(data => this.serie = new Serie(data), error => console.log(error));
+      .subscribe(data => {
+        this.serie = new Serie(data)
+        this.serie.thumb = 'http://lorempixel.com/200/300/';
+      } , error => console.log(error));
   }
 }
