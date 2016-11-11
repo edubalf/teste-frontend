@@ -22,7 +22,6 @@ describe('SerieListItemComponent', () => {
       ids: {
         slug: 'slug-test'
       },
-      image: 'image-test',
       overview: 'overview-test',
       rating: 6.345345,
       thumb: 'http://lorempixel.com/',
@@ -38,19 +37,9 @@ describe('SerieListItemComponent', () => {
 
 
   it('html render', () => {
-
-    expect(fixture.nativeElement.innerHTML).toEqual(
-`<a _ngcontent-a-1="" ng-reflect-href="/serie/slug-test" href="/serie/slug-test">
-  <div _ngcontent-a-1="" class="card small z-depth-2 hoverable">
-    <div _ngcontent-a-1="" class="card-image">
-      <img _ngcontent-a-1="" ng-reflect-src="http://lorempixel.com/" src="http://lorempixel.com/">
-    </div>
-    <div _ngcontent-a-1="" class="card-content">
-      <span _ngcontent-a-1="" class="card-title grey-text text-darken-4" style="font-size:15px;">title-test</span>
-    </div>
-  </div>
-</a>`);
-
+    expect(fixture.nativeElement.innerHTML).toContain(component.serie.ids.slug);
+    expect(fixture.nativeElement.innerHTML).toContain(component.serie.thumb);
+    expect(fixture.nativeElement.innerHTML).toContain(component.serie.title);
   });
 
 });

@@ -5,7 +5,6 @@ export class Serie {
     title: string = '';
     thumb: string = '';
     overview: string = '';
-    image: string = '';
     rating: number = 0;
 
     constructor(values: Object = {}) {

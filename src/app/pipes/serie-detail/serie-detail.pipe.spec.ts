@@ -11,7 +11,7 @@ describe('Pipe: SerieDetail', () => {
 
   it('6.472 to 6.5', () => {
     let pipe = new RatingFormat();
-    expect(pipe.transform(6.472)).toEqual(6.5)
+    expect(pipe.transform(6.472)).toEqual(6.5);
   });
 
 });

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { environment } from '../../../environments/environment';
 import 'rxjs/RX';
 
 @Injectable()
@@ -14,14 +15,14 @@ export class SeriesService {
     return new Headers(
       {
         'trakt-api-version': '2',
-        'trakt-api-key': '1ba47e601d5db0b02965f703621db88aedc02390830d9cbad0edc357e03f47fd',
+        'trakt-api-key': environment.traktApiKey,
         'Content-Type': 'application/json'
       });
   }
 
   getSeries(page: number, count: number) {
 
-    return this.http.get('https://api.trakt.tv/shows/popular?page=' + page + '&limit=' + count, {
+    return this.http.get(environment.traktUrl + 'shows/popular?page=' + page + '&limit=' + count, {
       headers: this.getAuthorizationHeader()
     })
       .map(res => res.json())
@@ -30,7 +31,7 @@ export class SeriesService {
 
   getSerieDetail(slug: string) {
 
-    return this.http.get('https://api.trakt.tv/shows/' + slug + '?extended=full', {
+    return this.http.get(environment.traktUrl + 'shows/' + slug + '?extended=full', {
       headers: this.getAuthorizationHeader()
     })
       .map(res => res.json())

@@ -28,7 +28,7 @@ export class SerieDetailComponent implements OnInit {
   getSerieDetail(slug: string) {
     this.seriesService.getSerieDetail(slug)
       .subscribe(data => {
-        this.serie = new Serie(data)
+        this.serie = new Serie(data);
         this.serie.thumb = 'http://lorempixel.com/200/300/';
       } , error => console.log(error));
   }

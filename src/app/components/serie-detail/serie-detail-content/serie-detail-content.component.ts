@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Serie } from '../../../models/serie'
+import { Serie } from '../../../models/serie';
 
 @Component({
   selector: 'app-serie-detail-content',
@@ -9,7 +9,7 @@ import { Serie } from '../../../models/serie'
 export class SerieDetailContentComponent implements OnInit {
 
   @Input()
-  public serie:Serie;
+  public serie: Serie;
 
   constructor() { }
 

@@ -12,9 +12,9 @@ describe('SerieDetailContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ 
+      declarations: [
         SerieDetailContentComponent,
-        RatingFormat 
+        RatingFormat
       ]
     })
     .compileComponents();
@@ -26,7 +26,6 @@ describe('SerieDetailContentComponent', () => {
       ids: {
         slug: 'slug-test'
       },
-      image: 'image-test',
       overview: 'overview-test',
       rating: 6.345345,
       thumb: 'http://lorempixel.com/',
@@ -41,15 +40,9 @@ describe('SerieDetailContentComponent', () => {
   });
 
   it('html render', () => {
-    expect(fixture.nativeElement.innerHTML).toEqual(
-`<div _ngcontent-a-1="" class="row">
-  <div _ngcontent-a-1="" class="col s12 m4 l4 center-align">
-    <img _ngcontent-a-1="" class="responsive-img z-depth-3" ng-reflect-src="http://lorempixel.com/" src="http://lorempixel.com/">
-  </div>
-  <div _ngcontent-a-1="" class="col s12 m8 l8">
-    <h4 _ngcontent-a-1="">title-test<span _ngcontent-a-1="" class="right"><i _ngcontent-a-1="" class="material-icons">star</i>6.3</span></h4>
-    <p _ngcontent-a-1="">overview-test</p>
-  </div>
-</div>`)
+    expect(fixture.nativeElement.innerHTML).toContain(component.serie.title);
+    expect(fixture.nativeElement.innerHTML).toContain(component.serie.thumb);
+    expect(fixture.nativeElement.innerHTML).toContain(component.serie.overview);
+    expect(fixture.nativeElement.innerHTML).toContain('6.3');
   });
 });
