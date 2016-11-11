@@ -29,7 +29,7 @@ export class SerieDetailComponent implements OnInit {
     this.seriesService.getSerieDetail(slug)
       .subscribe(data => {
         this.serie = new Serie(data);
-        this.serie.thumb = 'http://lorempixel.com/200/300/';
+        this.serie.thumb = 'http://lorempixel.com/300/400/';
       } , error => console.log(error));
   }
 }

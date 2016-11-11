@@ -35,7 +35,7 @@ export class SeriesListComponent implements OnInit {
       .subscribe((data) => {
 
         Array.from(data).forEach(function (serie: Serie) {
-          serie.thumb = 'http://lorempixel.com/200/300/';
+          serie.thumb = 'http://lorempixel.com/300/400/';
         });
 
         this.series = this.series.concat(data);
