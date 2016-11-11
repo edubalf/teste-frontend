@@ -9,7 +9,7 @@ Execute `ng serve` por padrão ficara na url `http://localhost:4200/`.
 
 ## Executar teste de unidade
 
-`ng test` - [Karma](https://karma-runner.github.io).
+`ng test` [Karma](https://karma-runner.github.io).
 
 ## Executar teste
 
@@ -27,3 +27,4 @@ A aplicação precisa estar executando para rodar `ng serve`.
 - [Protractor](http://www.protractortest.org/)
 - [Karma](https://karma-runner.github.io)
 - [typescript](https://www.typescriptlang.org/)
+- [tslint](https://palantir.github.io/tslint/)
